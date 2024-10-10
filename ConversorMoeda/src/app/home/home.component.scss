@@ -1,35 +1,33 @@
 .pagina-home {
-  color: #000; /* Texto preto */
-
+  color: #000; 
   .titulo-home {
     font-size: 2.5rem;
-    color: #ffc107; /* Amarelo */
-  }
+    color: #ffc107;   }
 
   .descricao-home {
     font-size: 1.25rem;
-    color: #212529; /* Texto cinza escuro */
+    color: #212529;     
     margin-bottom: 20px;
   }
 
   .objetivos-home {
+    margin: 0 400px;
     .lista-objetivos {
       padding: 0;
-      border: 1px solid #ffc107; /* Borda amarela */
+      border: 1px solid #ffc107;       
       border-radius: 5px; 
 
       .item-objetivo {
         background-color: #ffffff;
-        color: #212529; /* Texto cinza escuro */
-        border: 1px solid #ffc107; /* Borda amarela */
+        color: #212529;         
+        border: 1px solid #ffc107;         
         border-radius: 5px; 
-        padding: 5px; /* Reduzindo o espaçamento interno */
-        margin-bottom: 5px; /* Reduzindo o espaçamento entre os itens */
+        padding: 5px;         
+        margin-bottom: 5px; 
 
         &:hover {
-          background-color: #ffc107; /* Fundo amarelo ao passar o mouse */
-          color: #fff; /* Texto branco ao passar o mouse */
-        }
+          background-color: #ffc107;           
+          color: #fff;         }
       }
     }
   }
@@ -41,9 +39,10 @@
     }
 
     .botao-principal {
-      background-color: #ffc107; /* Amarelo */
-      color: #000; /* Texto preto */
+      background-color: #ffc107;       
+      color: #000;       
       border: none;
+
       &:hover {
         background-color: #000000;
         color: white;
@@ -51,8 +50,9 @@
     }
 
     .botao-secundario {
-      background-color: #28a745; /* Verde como opção secundária */
-      color: #fff; /* Texto branco */
+      background-color: #28a745;       
+      color: #fff;       
+      
       &:hover {
         background-color: #000000;
         color: white;
