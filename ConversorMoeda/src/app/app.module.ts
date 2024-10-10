@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { MoedasComponent } from './moedas/moedas.component';
 import { ListaMoedasComponent } from './lista-moedas/lista-moedas.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { ListaMoedasComponent } from './lista-moedas/lista-moedas.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

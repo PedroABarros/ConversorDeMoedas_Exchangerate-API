@@ -1,20 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { MoedaService } from '../moedas/moeda.service';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-moeda-list',
+  selector: 'app-lista-moedas',
   templateUrl: './lista-moedas.component.html',
   styleUrls: ['./lista-moedas.component.css']
 })
-export class MoedaListComponent implements OnInit {
-  moedas: any[] = [];
-  displayedColumns: string[] = ['symbol', 'name'];
-
-  constructor(private moedaService: MoedaService) { }
-
-  ngOnInit(): void {
-    this.moedaService.getMoedas().subscribe(data => {
-      this.moedas = data.supported_codes;
-    });
-  }
+export class ListaMoedasComponent {
+  @Input() moedas: any[] = [];
 }
