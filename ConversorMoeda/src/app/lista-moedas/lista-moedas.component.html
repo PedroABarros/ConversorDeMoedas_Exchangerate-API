@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="lista-moedas-container">
     <mat-form-field>
       <mat-label>Buscar moeda</mat-label>
@@ -24,4 +25,21 @@
   
     <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
   </div>
+=======
+<table mat-table [dataSource]="moedas" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="simbolo">
+      <th mat-header-cell *matHeaderCellDef> Símbolo </th>
+      <td mat-cell *matCellDef="let moeda"> {{moeda[0]}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let moeda"> {{moeda[1]}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let linha; columns: displayedColumns;"></tr>
+  </table>
+>>>>>>> d35afa472c3dedd45bf054cfcefcad844c5640a8
   

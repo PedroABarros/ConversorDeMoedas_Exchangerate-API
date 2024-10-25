@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
@@ -7,10 +8,14 @@ export interface Moeda {
   symbol: string;
   name: string;
 }
+=======
+import { Component, Input } from '@angular/core';
+>>>>>>> d35afa472c3dedd45bf054cfcefcad844c5640a8
 
 @Component({
   selector: 'app-lista-moedas',
   templateUrl: './lista-moedas.component.html',
+<<<<<<< HEAD
   styleUrls: ['./lista-moedas.component.scss']
 })
 export class ListaMoedasComponent implements OnInit {
@@ -33,3 +38,10 @@ export class ListaMoedasComponent implements OnInit {
     }
   }
 }
+=======
+  styleUrls: ['./lista-moedas.component.css']
+})
+export class ListaMoedasComponent {
+  @Input() moedas: any[] = [];
+}
+>>>>>>> d35afa472c3dedd45bf054cfcefcad844c5640a8
