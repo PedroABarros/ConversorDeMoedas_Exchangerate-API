@@ -1,35 +1,36 @@
 .pagina-home {
-  color: #000; /* Texto preto */
+  color: #000;
 
   .titulo-home {
     font-size: 2.5rem;
-    color: #ffc107; /* Amarelo */
+    color: #ffc107;
   }
 
   .descricao-home {
     font-size: 1.25rem;
-    color: #212529; /* Texto cinza escuro */
+    color: #212529;
     margin-bottom: 20px;
   }
 
   .objetivos-home {
+    display: flex;
+    justify-content: center;
+
     .lista-objetivos {
+      list-style-type: none;
       padding: 0;
-      border: 1px solid #ffc107; /* Borda amarela */
-      border-radius: 5px; 
+      max-width: 600px;
+      width: 100%;
+      align-items: center;
 
-      .item-objetivo {
-        background-color: #ffffff;
-        color: #212529; /* Texto cinza escuro */
-        border: 1px solid #ffc107; /* Borda amarela */
-        border-radius: 5px; 
-        padding: 5px; /* Reduzindo o espaçamento interno */
-        margin-bottom: 5px; /* Reduzindo o espaçamento entre os itens */
-
-        &:hover {
-          background-color: #ffc107; /* Fundo amarelo ao passar o mouse */
-          color: #fff; /* Texto branco ao passar o mouse */
-        }
+      .list-group-item {
+        color: #212529;
+        border: none; /* Remove as bordas */
+        border-radius: 0; /* Remove bordas arredondadas */
+        padding: 5px 10px;
+        margin-bottom: 3px;
+        font-size: 1rem;
+        text-align: left;
       }
     }
   }
@@ -41,21 +42,19 @@
     }
 
     .botao-principal {
-      background-color: #ffc107; /* Amarelo */
-      color: #000; /* Texto preto */
+      background-color: #ffc107;
+      color: #000;
       border: none;
       &:hover {
-        background-color: #000000;
-        color: white;
+        background-color: #e0a800;
       }
     }
 
     .botao-secundario {
-      background-color: #28a745; /* Verde como opção secundária */
-      color: #fff; /* Texto branco */
+      background-color: #28a745;
+      color: #fff;
       &:hover {
-        background-color: #000000;
-        color: white;
+        background-color: #218838;
       }
     }
   }
