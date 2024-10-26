@@ -1,5 +1,4 @@
 .pagina-home {
-<<<<<<< HEAD
   color: #000;
 
   .titulo-home {
@@ -10,59 +9,38 @@
   .descricao-home {
     font-size: 1.25rem;
     color: #212529;
-=======
-  color: #000; 
-  .titulo-home {
-    font-size: 2.5rem;
-    color: #ffc107;   }
-
-  .descricao-home {
-    font-size: 1.25rem;
-    color: #212529;     
->>>>>>> d35afa472c3dedd45bf054cfcefcad844c5640a8
     margin-bottom: 20px;
   }
 
   .objetivos-home {
-<<<<<<< HEAD
     display: flex;
     justify-content: center;
-
-=======
     margin: 0 400px;
->>>>>>> d35afa472c3dedd45bf054cfcefcad844c5640a8
+
     .lista-objetivos {
       list-style-type: none;
       padding: 0;
-<<<<<<< HEAD
       max-width: 600px;
       width: 100%;
       align-items: center;
+      border: 1px solid #ffc107;
+      border-radius: 5px;
 
-      .list-group-item {
-        color: #212529;
-        border: none; /* Remove as bordas */
-        border-radius: 0; /* Remove bordas arredondadas */
-        padding: 5px 10px;
-        margin-bottom: 3px;
-        font-size: 1rem;
-        text-align: left;
-=======
-      border: 1px solid #ffc107;       
-      border-radius: 5px; 
-
+      .list-group-item,
       .item-objetivo {
         background-color: #ffffff;
-        color: #212529;         
-        border: 1px solid #ffc107;         
-        border-radius: 5px; 
-        padding: 5px;         
-        margin-bottom: 5px; 
+        color: #212529;
+        border: 1px solid #ffc107;
+        border-radius: 5px;
+        padding: 5px;
+        margin-bottom: 5px;
+        font-size: 1rem;
+        text-align: left;
 
         &:hover {
-          background-color: #ffc107;           
-          color: #fff;         }
->>>>>>> d35afa472c3dedd45bf054cfcefcad844c5640a8
+          background-color: #ffc107;
+          color: #fff;
+        }
       }
     }
   }
@@ -74,13 +52,8 @@
     }
 
     .botao-principal {
-<<<<<<< HEAD
       background-color: #ffc107;
       color: #000;
-=======
-      background-color: #ffc107;       
-      color: #000;       
->>>>>>> d35afa472c3dedd45bf054cfcefcad844c5640a8
       border: none;
 
       &:hover {
@@ -89,14 +62,9 @@
     }
 
     .botao-secundario {
-<<<<<<< HEAD
       background-color: #28a745;
       color: #fff;
-=======
-      background-color: #28a745;       
-      color: #fff;       
-      
->>>>>>> d35afa472c3dedd45bf054cfcefcad844c5640a8
+
       &:hover {
         background-color: #218838;
       }

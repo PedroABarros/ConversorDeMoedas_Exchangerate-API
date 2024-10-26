@@ -1,1 +1,34 @@
-<p>conversor works!</p>
+<div class="conversor">
+  <h2>Conversor de Moedas</h2>
+  
+  <div>
+    <label for="moedaOrigem">Moeda de Origem:</label>
+    <select [(ngModel)]="moedaOrigem" id="moedaOrigem">
+      <option *ngFor="let moeda of moedas" [value]="moeda.symbol">
+        {{ moeda.symbol }} - {{ moeda.name }}
+      </option>
+    </select>
+  </div>
+  
+  <div>
+    <label for="moedaDestino">Moeda de Destino:</label>
+    <select [(ngModel)]="moedaDestino" id="moedaDestino">
+      <option *ngFor="let moeda of moedas" [value]="moeda.symbol">
+        {{ moeda.symbol }} - {{ moeda.name }}
+      </option>
+    </select>
+  </div>
+
+  <div>
+    <label for="valorOrigem">Valor a Converter:</label>
+    <input type="number" [(ngModel)]="valorOrigem" id="valorOrigem">
+  </div>
+
+  <button (click)="converter()">Converter</button>
+
+  <div *ngIf="resultado">
+    <h3>Resultado: {{ resultado.valorConvertido }}</h3>
+  </div>
+
+  <div *ngIf="mensagemErro" class="error">{{ mensagemErro }}</div>
+</div>
