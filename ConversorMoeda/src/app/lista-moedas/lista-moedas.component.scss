@@ -1,40 +1,40 @@
 .lista-moedas-container {
-  padding: 2rem; // Espaçamento interno
-  background-color: #f8f9fa; // Cor de fundo leve
-  border-radius: 8px; // Arredondamento nas bordas
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Sombra para destaque
-  max-width: 800px; // Largura máxima
-  margin: 2rem auto; // Centraliza na tela
+  padding: 2rem; 
+  background-color: #f8f9fa; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  max-width: 800px; 
+  margin: 2rem auto; 
 
   mat-form-field {
-    width: 100%; // Ocupa toda a largura disponível
-    margin-bottom: 1.5rem; // Espaçamento abaixo do campo de busca
+    width: 100%; 
+    margin-bottom: 1.5rem; 
   }
 
   table {
-    width: 100%; // Largura total da tabela
-    border-collapse: collapse; // Remove espaçamento entre células
+    width: 100%; 
+    border-collapse: collapse; 
 
     th.mat-header-cell {
-      background-color: #ffc107; // Cor de fundo do cabeçalho
-      color: #fff; // Cor do texto do cabeçalho
-      font-weight: bold; // Negrito no cabeçalho
+      background-color: #ffc107; 
+      color: #fff; 
+      font-weight: bold; 
     }
 
     td.mat-cell {
-      padding: 12px; // Espaçamento interno das células
-      border-bottom: 1px solid #e0e0e0; // Linha de separação
+      padding: 12px; 
+      border-bottom: 1px solid #e0e0e0; 
     }
 
     tr.mat-row:hover {
-      background-color: rgba(241, 217, 143, 0.2); // Fundo ao passar o mouse
+      background-color: rgba(241, 217, 143, 0.2); 
     }
   }
 
   mat-paginator {
-    margin-top: 1.5rem; // Espaçamento acima do paginator
+    margin-top: 1.5rem; 
     .mat-paginator-range-label {
-      margin: 0; // Remove margem padrão
+      margin: 0; 
     }
   }
 }
