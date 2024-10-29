@@ -1,72 +1,88 @@
 .pagina-home {
-  color: #000;
+  color: #000; // Cor do texto
+  padding: 2rem; // Espaçamento interno
+  background-color: #f8f9fa; // Cor de fundo leve para a página
+  border-radius: 8px; // Arredondamento nas bordas
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Sombra para destaque
+  max-width: 800px; // Largura máxima
+  margin: 2rem auto; // Centraliza a página na tela
 
   .titulo-home {
-    font-size: 2.5rem;
-    color: #ffc107;
+    font-size: 2.5rem; // Tamanho do título
+    color: #ffc107; // Cor do título
+    text-align: center; // Centraliza o título
+    margin-bottom: 1rem; // Espaçamento abaixo do título
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); // Sombra para destaque
   }
 
   .descricao-home {
-    font-size: 1.25rem;
-    color: #212529;
-    margin-bottom: 20px;
+    font-size: 1.25rem; // Tamanho da descrição
+    color: #212529; // Cor da descrição
+    margin-bottom: 1.5rem; // Aumenta o espaçamento abaixo da descrição
+    text-align: center; // Centraliza a descrição
   }
 
   .objetivos-home {
-    display: flex;
-    justify-content: center;
-    margin: 0 400px;
+    display: flex; // Exibe a lista de objetivos em coluna
+    justify-content: center; // Centraliza os objetivos
+    margin: 2rem 0; // Aumenta o espaçamento superior e inferior
 
     .lista-objetivos {
-      list-style-type: none;
-      padding: 0;
-      max-width: 600px;
-      width: 100%;
-      align-items: center;
-      border: 1px solid #ffc107;
-      border-radius: 5px;
+      list-style-type: none; // Remove as marcas de lista
+      padding: 10px; // Espaçamento interno
+      max-width: 600px; // Largura máxima da lista
+      width: 100%; // Largura total
+      border: 1px solid #ffc107; // Borda leve
+      border-radius: 5px; // Arredondamento nas bordas
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Sombra para destaque
 
-      .list-group-item,
-      .item-objetivo {
-        background-color: #ffffff;
-        color: #212529;
-        border: 1px solid #ffc107;
-        border-radius: 5px;
-        padding: 5px;
-        margin-bottom: 5px;
-        font-size: 1rem;
-        text-align: left;
+      li {
+        color: #212529; // Cor do texto dos objetivos
+        padding: 10px; // Espaçamento interno
+        border-bottom: 1px solid #e9ecef; // Linha de separação entre os itens
 
-        &:hover {
-          background-color: #ffc107;
-          color: #fff;
+        &:last-child {
+          border-bottom: none; // Remove a borda do último item
         }
       }
     }
   }
 
   .acoes-home {
+    display: flex; // Exibe os botões em linha
+    justify-content: center; // Centraliza os botões
+    margin-top: 1.5rem; // Espaçamento acima da seção de ações
+
     a {
-      font-size: 1.2rem;
-      padding: 10px 20px;
+      font-size: 1.2rem; // Tamanho da fonte dos botões
+      padding: 10px 20px; // Espaçamento interno
+      text-decoration: none; // Remove o sublinhado
+      border-radius: 5px; // Arredondamento nas bordas dos links
+      margin: 0 10px; // Espaçamento entre os links
+      transition: background-color 0.3s, color 0.3s; // Transição suave
+
+      &:hover {
+        background-color: rgba(241, 217, 143, 0.2); // Fundo amarelo claro ao passar o mouse
+        color: #ffc107; // Muda a cor do texto ao passar o mouse
+      }
     }
 
     .botao-principal {
-      background-color: #ffc107;
-      color: #000;
-      border: none;
+      background-color: #ffc107; // Cor de fundo do botão principal
+      color: #000; // Cor do texto do botão principal
+      border: none; // Sem borda
 
       &:hover {
-        background-color: #e0a800;
+        background-color: #e0a800; // Cor ao passar o mouse
       }
     }
 
     .botao-secundario {
-      background-color: #28a745;
-      color: #fff;
+      background-color: #28a745; // Cor de fundo do botão secundário
+      color: #fff; // Cor do texto do botão secundário
 
       &:hover {
-        background-color: #218838;
+        background-color: #218838; // Cor ao passar o mouse
       }
     }
   }
