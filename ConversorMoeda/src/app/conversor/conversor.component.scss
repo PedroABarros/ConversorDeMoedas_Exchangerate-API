@@ -32,7 +32,10 @@
     border-radius: 5px; 
     font-size: 1.2rem; 
     cursor: pointer; 
-    transition: background-color 0.3s; 
+    transition: background-color 0.3s;
+    display: block; // Adiciona display block
+    margin: 0 auto; // Centraliza horizontalmente
+    text-align: center; // Garante que o texto do botão fique centralizado
 
     &:hover {
       background-color: #e0a800; 
@@ -45,7 +48,6 @@
     font-weight: bold; 
   }
 
-  
   h3 {
     margin-top: 1.5rem; 
     color: #28a745; 

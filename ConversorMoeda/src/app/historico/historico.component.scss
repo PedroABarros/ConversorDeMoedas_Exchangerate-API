@@ -1,0 +1,36 @@
+div {
+    padding: 2rem; // Espaçamento interno
+    background-color: #f8f9fa; // Cor de fundo leve
+    border-radius: 8px; // Arredondamento nas bordas
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Sombra para destaque
+    max-width: 900px; // Largura máxima
+    margin: 2rem auto; // Centraliza na tela
+  
+    h2 {
+      text-align: center; // Centraliza o título
+      color: #ffc107; // Cor do título
+      margin-bottom: 1.5rem; // Espaçamento abaixo do título
+    }
+  
+    table {
+      width: 100%; // Largura total da tabela
+      border-collapse: collapse; // Remove espaçamento entre células
+  
+      th.mat-header-cell {
+        background-color: #ffc107; // Cor de fundo do cabeçalho
+        color: #fff; // Cor do texto do cabeçalho
+        font-weight: bold; // Negrito no cabeçalho
+        padding: 12px; // Espaçamento interno do cabeçalho
+      }
+  
+      td.mat-cell {
+        padding: 12px; // Espaçamento interno das células
+        border-bottom: 1px solid #e0e0e0; // Linha de separação
+      }
+  
+      tr.mat-row:hover {
+        background-color: rgba(241, 217, 143, 0.2); // Fundo ao passar o mouse
+      }
+    }
+  }
+  

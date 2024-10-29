@@ -1,4 +1,3 @@
-<!-- conversor.component.html -->
 <div class="conversor">
   <h2>Conversor de Moedas</h2>
   
@@ -18,7 +17,7 @@
     <label for="valorOrigem">Valor a Converter:</label>
     <input type="number" [(ngModel)]="valorOrigem" id="valorOrigem">
   </div>
-
+  
   <button (click)="converter()">Converter</button>
 
   <div *ngIf="resultado">
