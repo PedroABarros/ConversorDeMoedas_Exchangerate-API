@@ -1,3 +1,4 @@
+// conversor.component.ts
 import { Component, OnInit } from '@angular/core';
 import { MoedaService, Moeda, ResultadoConversao } from '../service/moeda.service';
 
@@ -49,15 +50,11 @@ export class ConversorComponent implements OnInit {
     this.moedaService.converterMoeda(this.moedaOrigem, this.moedaDestino, this.valorOrigem)
       .subscribe({
         next: (resultado) => {
-          if (resultado) {
-            this.resultado = resultado;
-          } else {
-            this.mensagemErro = 'Não foi possível realizar a conversão com as moedas selecionadas.';
-          }
+          this.resultado = resultado;
         },
         error: (error) => {
           console.error('Erro na conversão:', error);
-          this.mensagemErro = 'Erro ao realizar a conversão. Tente novamente mais tarde.';
+          this.mensagemErro = error.message;
         }
       });
   }

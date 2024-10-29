@@ -1,23 +1,18 @@
+<!-- conversor.component.html -->
 <div class="conversor">
   <h2>Conversor de Moedas</h2>
   
-  <div>
-    <label for="moedaOrigem">Moeda de Origem:</label>
-    <select [(ngModel)]="moedaOrigem" id="moedaOrigem">
-      <option *ngFor="let moeda of moedas" [value]="moeda.symbol">
-        {{ moeda.symbol }} - {{ moeda.name }}
-      </option>
-    </select>
-  </div>
+  <select [(ngModel)]="moedaOrigem" id="moedaOrigem">
+    <option *ngFor="let moeda of moedas" [value]="moeda.symbol">
+      {{ moeda.symbol }} - {{ moeda.name }}
+    </option>
+  </select>
   
-  <div>
-    <label for="moedaDestino">Moeda de Destino:</label>
-    <select [(ngModel)]="moedaDestino" id="moedaDestino">
-      <option *ngFor="let moeda of moedas" [value]="moeda.symbol">
-        {{ moeda.symbol }} - {{ moeda.name }}
-      </option>
-    </select>
-  </div>
+  <select [(ngModel)]="moedaDestino" id="moedaDestino">
+    <option *ngFor="let moeda of moedas" [value]="moeda.symbol">
+      {{ moeda.symbol }} - {{ moeda.name }}
+    </option>
+  </select>
 
   <div>
     <label for="valorOrigem">Valor a Converter:</label>
@@ -27,7 +22,8 @@
   <button (click)="converter()">Converter</button>
 
   <div *ngIf="resultado">
-    <h3>Resultado: {{ resultado.valorConvertido }}</h3>
+    <h3>Resultado: {{ resultado.valorConvertido.toFixed(2) }} {{ moedaDestino }}</h3>
+    <p>Taxa: {{ resultado.taxa }}</p>
   </div>
 
   <div *ngIf="mensagemErro" class="error">{{ mensagemErro }}</div>
