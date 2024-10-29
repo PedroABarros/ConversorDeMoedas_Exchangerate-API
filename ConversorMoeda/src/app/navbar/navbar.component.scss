@@ -7,13 +7,13 @@ nav {
     .nav-link {
       margin-right: 15px;
       &:hover {
-        color: #ffc107 !important; /* Cor de destaque ao passar o mouse */
+        color: #ffc107 !important;
       }
     }
   
     .active {
       font-weight: bold;
-      color: #ffc107 !important; /* Cor destacada para o link ativo */
+      color: #ffc107 !important;
     }
   
     .navbar-toggler-icon {
