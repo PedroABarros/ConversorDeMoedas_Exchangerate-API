@@ -30,7 +30,7 @@ export class HistoricoService {
 
   private salvarHistorico(historico: Conversao[]): void {
     localStorage.setItem(this.STORAGE_KEY, JSON.stringify(historico));
-    this.historicoSubject.next(historico);
+    this.historicoSubject.next(historico); 
   }
 
   getHistorico(): Conversao[] {
@@ -43,14 +43,14 @@ export class HistoricoService {
 
   adicionarConversao(conversao: Conversao): void {
     const historico = this.getHistorico();
-    historico.unshift(conversao); // Adiciona a conversão no início do histórico
+    historico.unshift(conversao); 
     this.salvarHistorico(historico);
   }
 
   excluirConversao(index: number): void {
     const historico = this.getHistorico();
     if (index >= 0 && index < historico.length) {
-      historico.splice(index, 1); // Remove a conversão pelo índice
+      historico.splice(index, 1); 
       this.salvarHistorico(historico);
     }
   }
@@ -60,6 +60,6 @@ export class HistoricoService {
   }
 
   limparHistorico(): void {
-    this.salvarHistorico([]); // Limpa o histórico
+    this.salvarHistorico([]); 
   }
 }

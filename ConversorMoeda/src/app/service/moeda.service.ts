@@ -1,26 +1,25 @@
-// moeda.service.ts
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map, catchError, throwError } from 'rxjs';
 import { environment } from '../../environments/environment.development';
 
-// Interface para a resposta da API de conversão de moedas
+
 export interface ICurrencyResponse {
   result: string;
   documentation: string;
   terms_of_use: string;
   base_code: string;
-  conversion_rates: { [key: string]: number }; // Taxas de conversão
-  supported_codes?: [string, string][]; // Lista de códigos suportados (adicionado)
+  conversion_rates: { [key: string]: number }; 
+  supported_codes?: [string, string][]; 
 }
 
-// Interface para representar uma moeda
+
 export interface Moeda {
   symbol: string;
   name: string;
 }
 
-// Interface para o resultado da conversão
+
 export interface ResultadoConversao {
   valorConvertido: number;
   taxa: number;
@@ -40,16 +39,16 @@ export class MoedaService {
     };
   }
 
-  // Método para listar todas as moedas suportadas
+  
   listarMoedas(): Observable<Moeda[]> {
     const url = `${environment.api_url}/${environment.apiKey}/codes`;
     return this.http.get<ICurrencyResponse>(url, this.getHeaders()).pipe(
       map(response => {
-        console.log('Resposta da API para listar moedas:', response); // Adiciona log para depuração
+        console.log('Resposta da API para listar moedas:', response); 
         if (response && response.supported_codes) {
           return response.supported_codes.map(code => ({
-            symbol: code[0], // Apenas o símbolo
-            name: code[1]    // Nome completo para exibição
+            symbol: code[0], 
+            name: code[1]    
           }));
         } else {
           throw new Error('Não foi possível obter a lista de moedas.');
@@ -62,19 +61,19 @@ export class MoedaService {
     );
   }
   
-  // Método para obter a taxa de câmbio de uma moeda base
+  
   obterTaxaCambio(moedaBase: string): Observable<ICurrencyResponse> {
     const url = `${environment.api_url}/${environment.apiKey}/latest/${moedaBase}`;
     return this.http.get<ICurrencyResponse>(url, this.getHeaders());
   }
 
-  // Método para converter uma moeda
+  
   converterMoeda(moedaOrigem: string, moedaDestino: string, valor: number): Observable<ResultadoConversao> {
     return this.obterTaxaCambio(moedaOrigem).pipe(
       map(response => {
         if (response && response.conversion_rates && response.conversion_rates[moedaDestino]) {
           const taxaDestino = response.conversion_rates[moedaDestino];
-          const valorConvertido = valor * taxaDestino; // Atualização na conversão
+          const valorConvertido = valor * taxaDestino; 
           return {
             valorConvertido: valorConvertido,
             taxa: taxaDestino
